@@ -1,0 +1,51 @@
+{
+  "name": "onedrop",
+  "displayName": "OneDrop",
+  "version": "1.0.4",
+  "description": "OneDrop.app chrome extension",
+  "author": "onedropdotapp",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.3",
+    "framer-motion": "^12.10.0",
+    "plasmo": "0.90.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^7.5.0",
+    "styled-components": "^6.1.18",
+    "tailwindcss": "3.4.1"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.1.1",
+    "@types/chrome": "0.0.258",
+    "@types/node": "20.11.5",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "postcss": "8.4.33",
+    "prettier": "3.2.4",
+    "typescript": "5.3.3"
+  },
+  "manifest": {
+    "host_permissions": [
+      "https://x.com/*",
+      "https://twitter.com/*",
+      "https://www.onedrop.app/*",
+      "http://localhost:3000/*"
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "externally_connectable": {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*",
+        "https://www.onedrop.app/*",
+        "http://localhost:3000/*"
+      ]
+    }
+  }
+}

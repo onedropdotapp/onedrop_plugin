@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#plasmo-shadow-container {
+  all: initial;
+  box-sizing: border-box;
+}
+
+/* Add global gradient button style */
+.gradient-button {
+  background: linear-gradient(135deg, #B73FE8 0%, #FF8BDF 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.gradient-button:active {
+  transform: translateY(0);
+}
+
+
+.gradient-text {
+  color: #B73FE8;
+  transition: all 0.3s ease;
+}
+
+.gradient-text:hover {
+  color: #FF8BDF;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+  25% {
+    transform: translateY(-2px) rotate(-10deg);
+  }
+  75% {
+    transform: translateY(2px) rotate(10deg);
+  }
+}
+
+.plasmo-animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.plasmo-animate-shake {
+  animation: shake 1.5s ease-in-out infinite;
+}
+
+.plasmo-animate-bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.plasmo-animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
